@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        while(true){
+            const num=Math.floor(Math.random()*5);
+            let value=prompt("Enter the number");
+            if(num<=Number(value)){
+                console.log("got the number",num);
+                break;
+            }else{
+                console.log("you got wornh",num)
+            }
+        }
+    </script>
+</body>
+</html>

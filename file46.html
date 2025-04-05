@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button class="custom_class">Click here for now</button>
+    <p class="custom_class">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, reprehenderit.</p>
+    <p id="custom_id">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, voluptas.</p>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+         $("h1").text("This is me");
+         $("p,h1").text("Swarnika");
+         $(" body button.custom_class ").text("press here");
+        });
+    </script>
+</body>
+</html>

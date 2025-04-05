@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        #container{
+            /* display: grid; */
+        display: grid;
+        grid-template-columns: 30% 10% 10% 10% 10% 30%;
+        /* height: 0px; */
+        /* grid-column-gap: 20px; */
+        /* margin-top: 250px; */
+        margin: 0px 112px 0px 112px;
+        box-shadow: 10px 10px 15px #9a9ea4;
+        }
+        .nav1,.nav2,.nav3,.nav4,.nav5,.nav6{
+            /* text-shadow: 5px 5px 5px  #9a9ea4; */
+            /* border: 2px solid red; */
+            /* border-bottom: 2px solid #9a9ea4; */
+            text-align: center;
+            padding:25px;
+            background-color: whitesmoke;
+            font-size: 17px;
+        }
+        #grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        height: 450px;
+        grid-column-gap: 20px;
+        }
+        div.content{
+            width: 600px;
+            height: 450px;
+            margin-left: 112px;
+            margin-top: 200px;
+            /* border: 2px solid red; */
+        }
+        div.content h1{
+            font-size: 55px;
+            text-shadow: 5px 5px 5px  #9a9ea4;
+        }
+        div.content p{
+            font-size: 20px;
+        }
+       button{
+        text-align: center;
+        width: 118px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-left: 15px;
+        border: 2px solid rgb(240, 203, 196);
+        background-color:rgb(240, 203, 196);
+       color: rgb(69, 17, 17);
+       }
+       button:hover{
+        color: white;
+        background-color: red;
+       }
+       .bt{
+        text-align: center;
+        width: 118px;
+        padding: 5px;
+        border-radius: 10px;
+        margin-left: 15px;
+        border: 2px solid whitesmoke;
+        background-color:whitesmoke;
+       color: navy
+       }
+       .image_bs{
+        /* border: 2px solid red; */
+        width: 600px;
+        height: 550px;
+        margin-top: 75px;
+        background-image: url("imgage_bg.png");
+        /* background-size: cover; */
+        background-repeat: no-repeat;
+       }
+      div#edu{
+        display: grid;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        height: 120px;
+        grid-column-gap: 20px;
+        /* margin-top: 250px; */
+        margin: 250px 112px 0px 112px;
+      }
+      .box_size1, .box_size2, .box_size3,  .box_size4{
+        /* border: 2px solid red; */
+        border-radius: 7px;
+        padding: 5px;
+        font-size: 20px;
+        box-shadow: 10px 10px 15px #9a9ea4;
+      }
+      .box_size1{
+        background-color: rgb(232, 232, 171);
+      }
+      .box_size2{
+        background-color: rgb(207, 238, 207);
+      }
+      .box_size3{
+        background-color: rgb(181, 181, 228);
+      }
+      .box_size4{
+        background-color: rgb(237, 204, 204);
+      }
+      .course{
+        height: 150px;
+        width: 600px;
+        /* border: 2px solid red; */
+        margin :50px auto 0px auto;
+        text-align: center;
+        font-size: 20px;
+      }
+      .course h1{
+       font-size: 40px;
+       text-shadow: 5px 5px 5px  #9a9ea4;
+      }
+      div.design{
+        display: grid;
+        display: grid;
+        grid-template-columns: auto 150px 150px 150px  auto;
+        height: 60px;
+        /* grid-column-gap: 20px; */
+        /* margin-top: 250px; */
+        margin: 50px 112px 0px 112px;
+      }
+      .des1,.des2,.des3,.des4{
+        /* border: 2px solid red; */
+        /* border-radius: 7px; */
+        padding: 10px;
+        font-size: 18px;
+        text-align: center;
+        /* text-wrap: wrap; */
+        color: navy;
+        background-color: rgb(212, 239, 248);
+      }
+      .des1{
+        text-align: right;
+        padding-right: 35px;
+      }
+      .des5{
+        text-align: left;
+       
+        /* border: 2px solid red; */
+        /* border-radius: 7px; */
+        padding: 10px;
+        padding-left: 35px;
+        font-size: 18px;
+        color: navy;
+        background-color: rgb(212, 239, 248);
+      }
+      .des1:hover, .des2:hover,.des3:hover,.des4:hover,.des5:hover {
+        background-color: navy;
+        color: white;
+      }
+      #popular,#popular2{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        height: 450px;
+        grid-column-gap: 20px;
+        
+        margin :50px 152px 0px 112px;
+        
+      }
+      .img1,.img2,.img3,.img4,.img9,.img10,.img11,.img12{
+        /* border: 2px solid #9a9ea4; */
+        box-shadow: 10px 10px 15px #9a9ea4;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        height:225px;
+        /* width:200px; */
+      }
+      .img5,.img6,.img7,.img8,.img13,.img14,.img15,.img16,.part4,.part5,.part6{
+        /* border: 2px solid #9a9ea4; */
+        box-shadow: 10px 10px 15px #9a9ea4;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        height: 225px;
+        /* width: 173.68px; */
+        padding:10px;
+      }
+      
+      .img1{
+        background-image: url("02.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .img2{
+        background-image: url("03.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .img3{
+        background-image: url("04.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .img4{
+        background-image: url("07.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .img9{
+        background-image: url("08.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .img10{
+        background-image: url("09.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .img11{
+        background-image: url("11.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .img12{
+        background-image: url("12.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #para{
+        display: grid;
+        grid-template-columns: 70% 30%;
+        height: 200px;
+        
+        
+        margin :50px 112px 0px 112px;
+        
+      }
+      .para1,.para2{
+        /* border: 2px solid red; */
+        height:200px;
+        background-color: rgb(156 249 251);
+      }
+      .para1{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        padding: 35px;
+        font-size: 18px;
+      }
+      .para2{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      .para2 button{
+        width:170px;
+        margin-top: 73px;
+        margin-left: 80px;
+        border: 2px solid navy;
+        color: navy;
+        background-color: rgb(156 249 251);
+      }
+      .para2 button:hover{
+        background-color: navy;
+        color: white;
+      }
+      .trending{
+        height: 100px;
+        width: 600px;
+        /* border: 2px solid red; */
+        margin :50px auto 0px auto;
+        text-align: center;
+        font-size: 17px;
+      }
+      .trending h1{
+       font-size: 40px;
+       text-shadow: 5px 5px 5px  #9a9ea4;
+      }
+      #part{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        height: 600px;
+        grid-column-gap: 20px; 
+        margin :50px 112px 0px 112px;
+      }
+      .part1,.part2,.part3{
+        /* border: 2px solid #9a9ea4; */
+        box-shadow: 10px 10px 15px #9a9ea4;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        height:300px;
+      }
+      .part4,.part5,.part6{
+        /* border: 2px solid #9a9ea4; */
+        box-shadow: 10px 10px 15px #9a9ea4;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        height: 300px;
+        /* width: 173.68px; */
+        padding:10px;
+      }
+      .part1{
+        background-image: url("14.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .part2{
+        background-image: url("16.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .part3{
+        background-image: url("17.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .part4,.part5,.part6{
+        padding-left: 15px;
+        padding-top: 5px;
+      }
+       .bos1{
+        color: navy;
+        background-color: rgb(200, 200, 248);
+        border :none;
+        padding: 0px;
+        width: 70px;
+        height: 35px;
+        margin: 15px;
+      }
+      .bos2{
+        color: white;
+        background-color: black;
+        border: none;
+        padding: 0px;
+        width: 90px;
+        height: 35px;
+        margin: 15px 0px;
+      }
+      div#footer{
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        height: 300px;  
+        margin :100px 112px 0px 112px;
+      }
+  .eduport,.community,.company,.teaching ,.contact{
+    /* border: 2px solid red; */
+    text-align: left;
+    font-size: 15px;
+    padding-top: 50px;
+    color: #9a9ea4;
+    background-color: whitesmoke;
+  }
+  .eduport {
+    padding-left: 10px;
+  }
+  .eduport h3,.community h3,.company h3,.teaching h3,.contact h3{
+    font-size: 20px;
+    padding-left: 32px;
+    color: black;
+  }
+  .community ul,.company ul,.teaching ul,.contact ul {
+    list-style: none;
+  }
+
+    </style>
+</head>
+<body>
+    <div id="container" >
+      <div class="nav1" >Eduport</div>
+      <a class="nav2" href="demos.html">Demos</a>
+      <a class="nav3" href="pages.html">Pages</a>
+      <a class="nav4" href="accounts.html">Accounts</a>
+      <a class="nav5" href="settings.html">Settings</a>
+        <div class="nav6"><input type="text" placeholder="Search.."></div>
+       
+    </div>
+    <div id="grid">
+
+        <div class="content">
+            <h1>Limitless learning at your fingertips</h1>
+            <p>Online learning and teaching marketplace with 5K+ courses & 10M students. Taught by experts to help you acquire new skills. </p>
+            <ul>
+                <li>Learn with experts</li>
+                <li>Get certificate</li>
+                <li>Get Membership</li>
+            </ul>
+            <br>
+            <a href="demos.html">
+              <button type="button">Get Started</button>
+            </a>
+            <a href="https://www.youtube.com/@UnacademyNEET" target="_blank">
+              <button type="button" class="bt">Watch Video</button>
+            </a>
+        </div>
+        <div class="image_bs">
+            
+        </div>
+    </div>
+      <div id="edu">
+        <div class="box_size1"><h2>10K</h2>
+        Online Course</div>
+        <div class="box_size2"><h2>200+</h2>Expert Tutors</div>
+        <div class="box_size3"><h2>60K</h2>Online Students</div>
+        <div class="box_size4"><h2>6K+</h2>Certified Course</div>
+      </div>
+    <div class="course"><h1> <b>Most Popular Courses</b></h1>
+        Choose from hundreds of courses from specialist organizations</div>
+        <div class="design">
+            <div class="des1">Web Design</div>
+            <div class="des2">Development</div>
+            <div class="des3">Graphic Design</div>
+            <div class="des4">Marketing</div>
+            <div class="des5">Finance</div>
+        </div>
+        <div id="popular">
+        <div class="img1"></div>
+        <div class="img2"></div>
+        <div class="img3"></div>
+        <div class="img4"></div>
+        <div class="img5"><h3>Sketch from A to Z:for app designer</h3><p>
+            Proposal indulged no do sociable he throwing settling.
+        </p></div>
+        <div class="img6"><h3>Graphic Design Masterclass</h3><p>Rooms oh fully taken by worse do Points afraid but may end Rooms</p></div>
+        <div class="img7"><h3>Sketch from A to Z:for app designer</h3><p>
+            Proposal indulged no do sociable he throwing settling.
+        </p></div>
+        <div class="img8"><h3>Sketch from A to Z:for app designer</h3><p>
+            Proposal indulged no do sociable he throwing settling.
+        </p></div>
+        </div>
+        <div id="popular2">
+            <div class="img9"></div>
+            <div class="img10"></div>
+            <div class="img11"></div>
+            <div class="img12"></div>
+            <div class="img13"><h3>Sketch from A to Z:for app designer</h3><p>
+                Proposal indulged no do sociable he throwing settling.
+            </p></div>
+            <div class="img14"><h3>Graphic Design Masterclass</h3><p>Rooms oh fully taken by worse do Points afraid but may end Rooms</p></div>
+            <div class="img15"><h3>Sketch from A to Z:for app designer</h3><p>
+                Proposal indulged no do sociable he throwing settling.
+            </p></div>
+            <div class="img16"><h3>Graphic Design Masterclass</h3><p>Rooms oh fully taken by worse do Points afraid but may end Rooms</p></div>
+            </div>
+            <div id="para">
+                <div class="para1">
+
+                    <h2>Become an Instructor</h2>
+                    <p>
+                        Speedily say has suitable disposal add boy. On forth doubt miles of child. Exercise joy man children rejoiced. Yet uncommonly his ten who diminution astonished.
+                    </p>
+                </div>
+                <div class="para2">
+                  <a href="teach.html" target="_blank">
+                    <button type="button">Start teaching today</button>
+                  </a>
+                </div>
+            </div>
+            <div class="trending">
+                <h1>Our trending Courses</h1>
+                <p>Check out most 🔥 courses in the market</p>
+            </div>
+        <div id="part">
+            <div class="part1"></div>
+            <div class="part2"></div>
+            <div class="part3"></div>
+            <div class="part4">
+            <span><button class="bos1" type="button">design</button> <button class="bos2" type="button">Beginner</button></span>
+            <h3>Time Management Mastery:Do More Stress Less</h3></div>
+            <div class="part5"><span><button class="bos1" type="button">design</button> <button class="bos2" type="button">Beginner</button></span><h3>The Complete Digitak Marketing Course</h3></div>
+            <div class="part6"><span><button class="bos1" type="button">design</button> <button class="bos2" type="button">Beginner</button></span><h3>Angular The Complete Guide(2021 Edition)</h3></div>
+        </div>
+        <div id="footer">
+            <div class="eduport">
+                <h3>Eduport</h3><br>
+                <p>Eduport education theme, built specifically for the education centers which is dedicated to teaching and involve learners.</p>
+            </div>
+            <div class="company"><h3>Company</h3><br>
+            <ul>
+                <li>About us</li>
+                <li>Contact us</li>
+                <li>News and Blogs</li>
+                <li>Library</li>
+                <li>Career</li>
+            </ul></div>
+            <div class="community"><h3>Community</h3><br>
+            <ul>
+                <li>Documentation</li>
+                <li>Faq</li>
+                <li>Forum
+                </li>
+                <li>Sitemap</li>
+            </ul></div>
+            <div class="teaching"> <h3>Teaching</h3><br>
+            <ul>
+                <li>Become a Teacher</li>
+                <li>How to Guide</li>
+                <li>Terms & Conditions</li>
+            </ul></div>
+            <div class="contact"><h3>Contact</h3><br>
+            <ul><li>
+                Toll free:+1234 568 963
+            </li>
+        <li>
+            (9:AM to 8:PM IST)
+        </li>
+    <li>Email:example@gmail.com</li></ul></div>
+        </div>
+        <hr>
+</body>
+</html>

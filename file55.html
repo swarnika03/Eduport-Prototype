@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <li>First Item</li>
+    <li>Second Item</li>
+    <li>Third Item</li> -->
+    <input type="text">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("li").each(function(index,element){
+            //     const original=$(element).text();
+            //     $(element).text(`${index+1} . ${original}`);
+            //     if(index===1){
+            //         $(element)
+            //            .css("background-color","black")
+            //            .css("color","white")
+            //     }
+            // })
+           $.post('https://httpbin.org/post',{"hello":"pari"},function(data){
+            console.log("post completed");
+            console.log(data['form']);
+           })
+        })
+    </script>
+</body>
+</html>

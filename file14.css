@@ -1,0 +1,28 @@
+/* body{
+    background-image: url(scenery.jpg);
+    background-size: cover;
+
+}
+div.box{
+ width: 400px;
+ height: 400px;
+ text-align: center;
+ margin: 50px auto 50px auto;
+ background-color: rgba(0, 0, 0, 0.5);
+ color: white;
+ /* opacity: 0.5; */
+ /* padding: 20px;
+ font-size: 20px;
+} */ 
+img.floating{
+    float: right;
+    border: 2px solid red;
+    margin: 10px;
+    box-shadow: 0 0 5px black;
+}
+img.floating1{
+    float: left;
+    border: 2px solid red;
+    margin: 10px;
+    box-shadow: 0 0 5px black;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            /* display: none; */
+        }
+        .blue{
+            background-color: red;
+        }
+       
+    </style>
+</head>
+<body>
+    <!-- <button class="Toggle-here" >Toggle here</button>
+      -->
+    <input type="text">
+    <!-- <button class="remove-width" >remvove_width</button> -->
+    <div class="box blue width100"></div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // setTimeout(function(){
+            const $box=$(".box");
+            $("input").on("keyup",function(){
+                // $box.toggleClass("blue");
+                const value=$(this).val();
+                if(value==="Kalob"){
+                    $box.addClass("blue");
+                }else{
+                    $box.removeClass("blue");
+                }
+            })
+            // },2000)
+        });
+    </script>
+</body>
+</html>

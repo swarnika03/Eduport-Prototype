@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eduport - Account</title>
+  <style>
+     *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        #container{
+            /* display: grid; */
+        display: grid;
+        grid-template-columns: 30% 10% 10% 10% 10% 30%;
+        /* height: 0px; */
+        /* grid-column-gap: 20px; */
+        /* margin-top: 250px; */
+        margin: 0px 112px 0px 112px;
+        box-shadow: 10px 10px 15px #9a9ea4;
+        }
+        .nav1,.nav2,.nav3,.nav4,.nav5,.nav6{
+            /* text-shadow: 5px 5px 5px  #9a9ea4; */
+            /* border: 2px solid red; */
+            /* border-bottom: 2px solid #9a9ea4; */
+            text-align: center;
+            padding:25px;
+            background-color: whitesmoke;
+            font-size: 17px;
+        }
+
+     .auth-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 60px auto;
+        padding: 40px;
+        gap: 60px;
+        max-width: 1200px;
+     }
+
+     .form-box {
+        width: 45%;
+        padding: 40px;
+        background: white;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        transition: transform 0.3s;
+     }
+
+     .form-box:hover {
+        transform: translateY(-5px);
+     }
+
+     .form-box h2 {
+        margin-bottom: 30px;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 30px;
+     }
+
+     .form-box input {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        transition: border 0.3s;
+     }
+
+     .form-box input:focus {
+        border-color: #0077b6;
+        outline: none;
+     }
+
+     .form-box button {
+        width: 100%;
+        padding: 15px;
+        background-color: #0077b6;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.3s;
+     }
+
+     .form-box button:hover {
+        background-color: #023e8a;
+     }
+
+     .switch {
+        text-align: center;
+        font-size: 15px;
+        margin-top: 20px;
+        color: #555;
+     }
+
+     .switch a {
+        color: #0077b6;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+     }
+
+     .switch a:hover {
+        text-decoration: underline;
+     }
+
+     .toggle-password {
+        margin-top: -15px;
+        text-align: right;
+        font-size: 14px;
+        color: #0077b6;
+        cursor: pointer;
+        margin-bottom: 20px;
+     }
+
+     @media(max-width: 950px) {
+        .auth-container {
+            flex-direction: column;
+            gap: 40px;
+        }
+        .form-box {
+            width: 90%;
+        }
+     }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="container">
+    <a class="nav1" href="tut1.html">Eduport</a>
+    <a class="nav2" href="demos.html">Demos</a>
+    <a class="nav2" href="pages.html">Pages</a>
+    <a class="nav2" href="accounts.html">Accounts</a>
+    <a class="nav2" href="settings.html">Settings</a>
+    <div class="nav6"><input type="text" placeholder="Search..."></div>
+  </div>
+
+  <!-- Auth Section -->
+  <div class="auth-container">
+    <!-- Login Form -->
+    <div class="form-box" id="login-form">
+      <h2>Login</h2>
+      <input type="email" placeholder="Email Address">
+      <input type="password" id="login-password" placeholder="Password">
+      <div class="toggle-password" onclick="togglePassword('login-password')">👁 Show/Hide Password</div>
+      <button>Login</button>
+      <div class="switch">Don't have an account? <a id="show-signup">Sign Up</a></div>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="form-box" id="signup-form" style="display: none;">
+      <h2>Sign Up</h2>
+      <input type="text" placeholder="Full Name">
+      <input type="email" placeholder="Email Address">
+      <input type="password" placeholder="Password">
+      <button>Register</button>
+      <div class="switch">Already have an account? <a id="show-login">Login</a></div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Toggle between login and signup
+    const loginForm = document.getElementById("login-form");
+    const signupForm = document.getElementById("signup-form");
+
+    document.getElementById("show-signup").addEventListener("click", function () {
+      loginForm.style.display = "none";
+      signupForm.style.display = "block";
+    });
+
+    document.getElementById("show-login").addEventListener("click", function () {
+      signupForm.style.display = "none";
+      loginForm.style.display = "block";
+    });
+
+    // Password visibility toggle
+    function togglePassword(id) {
+      const input = document.getElementById(id);
+      if (input.type === "password") {
+        input.type = "text";
+      } else {
+        input.type = "password";
+      }
+    }
+  </script>
+</body>
+</html>
